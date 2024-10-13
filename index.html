@@ -5,17 +5,18 @@
 <title>This is a NYM Exit Gateway</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nymnode/assets/main/NYM.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace;
-}
-:root{
-  --background-color: #2e2c2c;
+  --background-color: #0d0e0f;
   --text-color: #f2f2f2;
   --link-color: #fb6e4e;
+  --gradient-start: #0d0e0f;
+  --gradient-end: #1a1c1e;
 }
 html {
-  background: var(--background-color);
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  min-height: 100vh;
 }
 body {
   margin: 0;
@@ -26,32 +27,43 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
 }
 header {
   text-align: center;
-  margin: 20px;
+  margin: 40px 0;
 }
 h1 {
-  font-size: 35px;
+  font-size: 2.5rem;
   color: var(--text-color);
+  margin-bottom: 20px;
 }
 img.logo {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(251, 110, 78, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+img.logo:hover {
+  transform: scale(1.05);
 }
 .description {
   text-align: center;
   max-width: 800px;
   padding: 20px;
-  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
 footer {
   width: 100%;
-  padding: 30px;
+  padding: 20px 30px;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 footer > div {
   max-width: 800px;
@@ -60,55 +72,85 @@ footer > div {
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
+  color: #ff8f75;
   text-decoration: underline;
 }
 .powered-by {
   text-align: center;
-  font-size: 12px;
-  margin-top: 30px;
+  font-size: 0.9rem;
+  margin-top: 0px;
+  padding: 0.5px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 .operator-details {
-  position: absolute;
-  top: 50px;
-  left: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   background-color: rgba(46, 44, 44, 0.9);
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.operator-details:hover {
+  transform: translateY(-5px);
 }
 .about-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 .about-links a {
-  width: 30%;
-  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.about-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 1s ease-out;
 }
 </style>
 </head>
 <body>
 
-<header>
+<header class="fade-in">
   <img class="logo" src="https://raw.githubusercontent.com/nymnode/assets/main/NYM.jpg" alt="NYM Logo">
   <h1>This is a Nym Exit Gateway</h1>
 </header>
 
-<section class="description">
+<section class="description fade-in">
   <p>Nym is a privacy-enhancing technology that allows users to communicate anonymously and securely over the internet. The Nym mixnet prevents adversaries from being able to monitor user traffic and trace it back to the sender. It does this by encrypting and routing data through multiple nodes in the network, ensuring complete privacy.</p>
   
   <p>Nym Exit Gateways are operated by individuals committed to making the internet a safer place for everyone. By providing privacy through decentralized VPN-like services, they contribute to protecting users' online activities from surveillance, ensuring secure and anonymous communication.</p>
 </section>
 
-<div class="operator-details">
-  <p><strong>Gateway Operator Details:</strong></p>
-  <p>Email: <a href="mailto:operator@nym.com">operator@nym.com</a></p>
+<div class="operator-details fade-in"> 
+<!-- 
+You can Modify below lines to input your details or Delete the row if you do not want 
+to include it or modify it to your liking 
+-->
+  <p><strong>Gateway Operator Details:</strong></p> 
+  <p>Name: Name</p> 
+  <p>Location: Location</p> 
+  <p>Contact: <a href="mailto:operator@nym.com">operator@nym.com</a></p> 
 </div>
 
-<footer>
+<footer class="fade-in">
   <div>
-    <p><strong>About Nym</strong></p>
+    <h2>About Nym</h2>
     <div class="about-links">
       <a href="https://nymtech.net" target="_blank">Website</a>
       <a href="https://nymtech.net/?name=roadmap" target="_blank">Roadmap</a>
@@ -123,7 +165,7 @@ a:hover {
   </div>
 </footer>
 
-<div class="powered-by">
+<div class="powered-by fade-in">
   <p>© 2023 Nym Technologies S.A. All rights reserved. Powered by <a href="https://nymnode.com" target="_blank">Nym-Node</a></p>
 </div>
 
