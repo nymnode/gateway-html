@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>This is a NYM Exit Gateway</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nymnode/assets/main/NYM.jpg">
+<style>
+:root {
+  font-family: Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace;
+}
+:root{
+  --background-color: #2e2c2c;
+  --text-color: #f2f2f2;
+  --link-color: #fb6e4e;
+}
+html {
+  background: var(--background-color);
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+header {
+  text-align: center;
+  margin: 20px;
+}
+h1 {
+  font-size: 35px;
+  color: var(--text-color);
+}
+img.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+.description {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  line-height: 1.6;
+}
+footer {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+footer > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.powered-by {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.operator-details {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-color: rgba(46, 44, 44, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+}
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about-links a {
+  width: 30%;
+  margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="https://raw.githubusercontent.com/nymnode/assets/main/NYM.jpg" alt="NYM Logo">
+  <h1>This is a Nym Exit Gateway</h1>
+</header>
+
+<section class="description">
+  <p>Nym is a privacy-enhancing technology that allows users to communicate anonymously and securely over the internet. The Nym mixnet prevents adversaries from being able to monitor user traffic and trace it back to the sender. It does this by encrypting and routing data through multiple nodes in the network, ensuring complete privacy.</p>
+  
+  <p>Nym Exit Gateways are operated by individuals committed to making the internet a safer place for everyone. By providing privacy through decentralized VPN-like services, they contribute to protecting users' online activities from surveillance, ensuring secure and anonymous communication.</p>
+</section>
+
+<div class="operator-details">
+  <p><strong>Gateway Operator Details:</strong></p>
+  <p>Email: <a href="mailto:operator@nym.com">operator@nym.com</a></p>
+</div>
+
+<footer>
+  <div>
+    <p><strong>About Nym</strong></p>
+    <div class="about-links">
+      <a href="https://nymtech.net" target="_blank">Website</a>
+      <a href="https://nymtech.net/?name=roadmap" target="_blank">Roadmap</a>
+      <a href="https://nymvpn.com/en" target="_blank">Download Nym VPN</a>      
+      <a href="mailto:contact@nymtech.net" target="_blank">Email</a>
+      <a href="https://nymtech.net/about/mission" target="_blank">Mission</a>
+      <a href="https://nymtech.net/download/wallet" target="_blank">Download Nym Wallet</a>
+      <a href="https://nymtech.net/docs/" target="_blank">Nym Docs</a>
+      <a href="https://nymtech.net/about/team" target="_blank">Nym Team</a>
+      <a href="https://nymtech.net/download/nymconnect" target="_blank">Nym Connect</a>
+    </div>
+  </div>
+</footer>
+
+<div class="powered-by">
+  <p>© 2023 Nym Technologies S.A. All rights reserved. Powered by <a href="https://nymnode.com" target="_blank">Nym-Node</a></p>
+</div>
+
+</body>
+</html>
